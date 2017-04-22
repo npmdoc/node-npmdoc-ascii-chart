@@ -1,9 +1,14 @@
-# api documentation for  [ascii-chart (v1.3.3)](https://github.com/jstrace/chart#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ascii-chart.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ascii-chart) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ascii-chart.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ascii-chart)
+# npmdoc-ascii-chart
+
+#### api documentation for  [ascii-chart (v1.3.3)](https://github.com/jstrace/chart#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-ascii-chart.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-ascii-chart) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-ascii-chart.svg)](https://travis-ci.org/npmdoc/node-npmdoc-ascii-chart)
+
 #### Ascii bar chart
 
-[![NPM](https://nodei.co/npm/ascii-chart.png?downloads=true)](https://www.npmjs.com/package/ascii-chart)
+[![NPM](https://nodei.co/npm/ascii-chart.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ascii-chart)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-ascii-chart/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-ascii-chart%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ascii-chart/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-ascii-chart/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-ascii-chart/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-ascii-chart/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ascii-chart/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-ascii-chart/build/screenCapture.npmPackageListing.svg)
 
@@ -48,35 +53,23 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "lukechilds",
-            "email": "lukechilds123@gmail.com"
+            "name": "lukechilds"
         },
         {
-            "name": "tjholowaychuk",
-            "email": "tj@vision-media.ca"
+            "name": "tjholowaychuk"
         }
     ],
     "name": "ascii-chart",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jstrace/chart.git"
     },
     "scripts": {},
-    "version": "1.3.3"
+    "version": "1.3.3",
+    "bin": {}
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module ascii-chart](#apidoc.module.ascii-chart)
-
-
-
-# <a name="apidoc.module.ascii-chart"></a>[module ascii-chart](#apidoc.module.ascii-chart)
 
 
 
