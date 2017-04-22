@@ -61,12 +61,111 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.ascii-chart">module ascii-chart</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ascii-chart.ascii-chart">
+            function <span class="apidocSignatureSpan"></span>ascii-chart
+            <span class="apidocSignatureSpan">(data, opts)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.ascii-chart" id="apidoc.module.ascii-chart">module ascii-chart</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ascii-chart.ascii-chart" id="apidoc.element.ascii-chart.ascii-chart">
+        function <span class="apidocSignatureSpan"></span>ascii-chart
+        <span class="apidocSignatureSpan">(data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function chart(data, opts) {
+  opts = opts || {};
+
+  // options
+  var w = opts.width || 130;
+  var h = opts.height || 30;
+  var pc = opts.pointChar || &#x27;█&#x27;;
+  var nc = opts.negativePointChar || &#x27;░&#x27;;
+  var ac = opts.axisChar || &#x27;.&#x27;;
+
+  // padding
+  var pad = typeof opts.padding === &#x27;number&#x27; ? opts.padding : 3;
+  w -= pad * 2;
+  h -= pad * 2;
+
+  // setup
+  var out = matrix(w, h);
+  var m = max(data) || 0;
+  var label = Math.abs(m).toString();
+  var labelw = label.length;
+  var labelp = 1;
+
+  // chart sizes void of padding etc
+  var ch = h;
+  var cw = w - labelw - labelp;
+
+  // fill
+  for (var y = 0; y &#x3c; h; y++) {
+    for (var x = 0; x &#x3c; w; x++) {
+      out[y][x] = &#x27; &#x27;;
+    }
+  }
+
+  // y-axis labels
+  for (var i = 0; i &#x3c; labelw; i++) {
+    out[0][i] = label[i];
+  }
+
+  out[h - 1][labelw - labelp] = &#x27;0&#x27;;
+
+  // y-axis
+  for (var y = 0; y &#x3c; h; y++) {
+    out[y][labelw + labelp] = ac;
+  }
+
+  // x-axis
+  var x = labelw + labelp;
+  while (x &#x3c; w) {
+    out[h - 1][x++] = ac;
+    out[h - 1][x++] = &#x27; &#x27;;
+  }
+
+  // strip excess from head
+  // so that data may &#x22;roll&#x22;
+  var space = Math.floor(w / 2) - 1;
+  var excess = Math.max(0, data.length - space);
+  if (excess) data = data.slice(excess);
+
+  // plot data
+  var x = labelw + labelp + 2;
+  for (var i = 0; i &#x3c; data.length; i++) {
+    var d = data[i];
+    var p = d / m;
+    var y = Math.round((h - 2) * p);
+    var c = y &#x3c; 0 ? nc : pc;
+    if (y &#x3c; 0) y = -y;
+
+    while (y--) {
+      out[Math.abs(y - h) - 2][x] = c;
+    }
+
+    x += 2;
+  }
+
+  // Return string
+  var str = string(out, h);
+  return pad ? padding(str, pad) : str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
